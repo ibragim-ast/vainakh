@@ -8,3 +8,10 @@
 
   --font-sans: var(--font-excentra), sans-serif;
 }
+
+.a11y-theme {
+  --color-brand-light: #fff;
+  --color-brand-dark: #000;
+  --color-brand-gold: #fff;
+  font-size: 125%;
+}
