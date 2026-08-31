@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import { Metadata } from "next";
+import Header from "@/components/layouts/Header";
 import "./globals.css";
 
 const excentra = localFont({
@@ -57,7 +58,7 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body className={`${excentra.variable} bg-brand-light text-brand-dark`}>
-        <header></header>
+        <Header />
         <main>{children}</main>
         <footer></footer>
       </body>
