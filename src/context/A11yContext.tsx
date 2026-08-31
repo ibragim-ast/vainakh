@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 export interface IA11yContext {
   isA11yMode: boolean;
@@ -15,6 +15,14 @@ export function A11yProvider({ children }: { children: React.ReactNode }) {
   const toggleA11yMode = () => {
     setIsA11yMode(!isA11yMode);
   };
+
+  useEffect(() => {
+    if (isA11yMode) {
+      document.body.classList.add("a11y-theme");
+    } else {
+      document.body.classList.remove("a11y-theme");
+    }
+  }, [isA11yMode]);
 
   return (
     <A11yContext.Provider value={{ isA11yMode, toggleA11yMode }}>
