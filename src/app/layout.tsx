@@ -1,4 +1,6 @@
 import localFont from "next/font/local";
+import { Metadata } from "next";
+import "./globals.css";
 
 const excentra = localFont({
   src: [
@@ -41,3 +43,24 @@ const excentra = localFont({
   variable: "--font-excentra",
   display: "swap",
 });
+
+export const metadata: Metadata = {
+  title: "Государственный академический ансамбль танца Вайнах",
+  description: 'Официальный сайт ГАУ ГААТ "Вайнах"',
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="ru">
+      <body className={`${excentra.variable} bg-brand-light text-brand-dark`}>
+        <header></header>
+        <main>{children}</main>
+        <footer></footer>
+      </body>
+    </html>
+  );
+}
