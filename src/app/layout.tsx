@@ -58,7 +58,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
-      <body className={`${excentra.variable} bg-brand-light text-brand-dark`}>
+      <body
+        className={`${excentra.variable} font-sans bg-brand-light text-brand-dark`}
+      >
         <A11yProvider>
           <Header />
           <main>{children}</main>
