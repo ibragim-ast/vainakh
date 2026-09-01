@@ -3,12 +3,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useA11y } from "@/context/A11yContext";
+import { useState } from "react";
 
 export default function Header() {
   const { isA11yMode, toggleA11yMode } = useA11y();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="flex justify-between items-center bg-brand-dark text-brand-gold px-6 py-4">
+    <header className="relative flex justify-between items-center bg-brand-dark text-brand-gold px-6 py-4">
       <Image
         alt="Логотип ансамбля Вайнах"
         width={300}
@@ -18,11 +20,14 @@ export default function Header() {
         src={isA11yMode ? "/logo-a11y.svg" : "/logo.svg"}
       />
       <nav aria-label="Главная навигация">
-        <ul className="flex gap-8">
+        <ul
+          className={`${isMobileMenuOpen ? "flex" : "hidden"} flex-col absolute top-full left-0 w-full bg-brand-dark p-6 gap-6 z-50 md:flex md:flex-row md:static md:w-auto md:p-0 md:gap-8`}
+        >
           <li>
             <Link
               href="/events"
               className="transition-colors hover:text-brand-light"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               Афиша
             </Link>
@@ -31,12 +36,19 @@ export default function Header() {
             <Link
               href="/about"
               className="transition-colors hover:text-brand-light"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               О нас
             </Link>
           </li>
         </ul>
       </nav>
+      <button
+        className="block md:hidden"
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+      >
+        {isMobileMenuOpen ? "Закрыть" : "Меню"}
+      </button>
       <button onClick={toggleA11yMode} aria-label="Версия для слабовидящих">
         {isA11yMode ? "Обычная версия" : "Версия для слабовидящих"}
       </button>
