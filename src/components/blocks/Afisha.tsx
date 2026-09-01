@@ -1,3 +1,4 @@
+import Link from "next/link";
 import EventCard from "../ui/EventCard";
 import { eventsData } from "@/data/events";
 
@@ -27,6 +28,14 @@ export default function Afisha() {
               description={item.description}
             />
           ))}
+      </div>
+      <div className="mt-12 flex justify-center">
+        <Link
+          href="/events"
+          className="px-8 py-4 uppercase tracking-widest font-bold border border-brand-dark text-brand-dark transition-colors hover:bg-brand-dark hover:text-brand-gold"
+        >
+          Все концерты
+        </Link>
       </div>
     </section>
   );

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import NewsCard from "../ui/NewsCard";
 import { newsData } from "@/data/news";
 
@@ -19,6 +20,14 @@ export default function News() {
             />
           ))}
         </div>
+      </div>
+      <div className="mt-12 flex justify-center">
+        <Link
+          href="/news"
+          className="px-8 py-4 uppercase tracking-widest font-bold border border-brand-light/30 text-brand-light transition-colors hover:bg-brand-orange hover:border-brand-orange hover:text-brand-dark"
+        >
+          Архив новостей
+        </Link>
       </div>
     </section>
   );
