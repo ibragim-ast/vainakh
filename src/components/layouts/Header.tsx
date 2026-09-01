@@ -11,14 +11,18 @@ export default function Header() {
 
   return (
     <header className="relative flex justify-between items-center bg-brand-dark text-brand-gold px-6 py-4">
-      <Image
-        alt="Логотип ансамбля Вайнах"
-        width={300}
-        height={90}
-        className="h-30 w-auto"
-        priority
-        src={isA11yMode ? "/logo-a11y.svg" : "/logo.svg"}
-      />
+      <Link href="/">
+        <Image
+          aria-label="На главную страницу"
+          alt="Логотип ансамбля Вайнах"
+          width={300}
+          height={90}
+          className="h-30 w-auto"
+          priority
+          src={isA11yMode ? "/logo-a11y.svg" : "/logo.svg"}
+        />
+      </Link>
+
       <nav aria-label="Главная навигация">
         <ul
           className={`${isMobileMenuOpen ? "flex" : "hidden"} flex-col absolute top-full left-0 w-full bg-brand-dark p-6 gap-6 z-50 md:flex md:flex-row md:static md:w-auto md:p-0 md:gap-8`}
