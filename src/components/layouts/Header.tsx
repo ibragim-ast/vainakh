@@ -10,7 +10,7 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="relative bg-brand-dark text-brand-gold px-6 py-4">
+    <header className="text-brand-gold px-6 py-4 sticky top-0 z-50 bg-brand-dark/80 backdrop-blur-md border-b border-white/5">
       <div className="flex justify-between items-center max-w-6xl mx-auto w-full">
         <Link href="/">
           <Image
@@ -26,12 +26,12 @@ export default function Header() {
 
         <nav aria-label="Главная навигация">
           <ul
-            className={`${isMobileMenuOpen ? "flex" : "hidden"} flex-col absolute top-full left-0 w-full bg-brand-dark p-6 gap-6 z-50 md:flex md:flex-row md:static md:w-auto md:p-0 md:gap-8`}
+            className={`${isMobileMenuOpen ? "flex" : "hidden"} md:bg-transparent flex-col absolute top-full left-0 w-full bg-brand-dark p-6 gap-6 z-50 md:flex md:flex-row md:static md:w-auto md:p-0 md:gap-8`}
           >
             <li>
               <Link
                 href="/events"
-                className="transition-colors hover:text-brand-light"
+                className="text-xs uppercase tracking-widest font-bold transition-all duration-300 hover:text-brand-light hover:opacity-80"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Афиша
@@ -40,7 +40,7 @@ export default function Header() {
             <li>
               <Link
                 href="/about"
-                className="transition-colors hover:text-brand-light"
+                className=" text-xs uppercase tracking-widest font-bold transition-all duration-300 hover:text-brand-light hover:opacity-80"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 О нас
@@ -54,7 +54,11 @@ export default function Header() {
         >
           {isMobileMenuOpen ? "Закрыть" : "Меню"}
         </button>
-        <button onClick={toggleA11yMode} aria-label="Версия для слабовидящих">
+        <button
+          className="px-4 py-2 text-xs uppercase tracking-widest border border-brand-gold/30 rounded-sm transition-colors hover:border-brand-gold hover:bg-brand-gold/10"
+          onClick={toggleA11yMode}
+          aria-label="Версия для слабовидящих"
+        >
           {isA11yMode ? "Обычная версия" : "Версия для слабовидящих"}
         </button>
       </div>
