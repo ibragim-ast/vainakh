@@ -33,6 +33,14 @@ const eventsData = [
     address: "г. Грозный, ул. Пушкина, 20",
     dateIso: "2026-12-05",
   },
+  {
+    id: 5,
+    dayOfTheMonth: 7,
+    month: "декабря",
+    description: "Августовский концерт",
+    address: "г. Грозный, ул. Пушкина, 20",
+    dateIso: "2026-08-05",
+  },
 ];
 
 export default function Afisha() {
@@ -44,6 +52,10 @@ export default function Afisha() {
         </h2>
 
         {eventsData
+          .filter(
+            (item) => new Date(item.dateIso).getTime() >= new Date().getTime(),
+          )
+          .slice(0, 3)
           .sort(
             (a, b) =>
               new Date(a.dateIso).getTime() - new Date(b.dateIso).getTime(),

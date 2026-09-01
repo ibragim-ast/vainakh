@@ -4,7 +4,7 @@ import News from "@/components/blocks/News";
 
 export default function Home() {
   return (
-    <div className="p-10">
+    <div>
       <Hero />
       <Afisha />
       <News />
