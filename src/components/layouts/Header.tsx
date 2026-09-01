@@ -13,7 +13,7 @@ export default function Header() {
         alt="Логотип ансамбля Вайнах"
         width={300}
         height={90}
-        className="h-[120px] w-auto"
+        className="h-30 w-auto"
         priority
         src={isA11yMode ? "/logo-a11y.svg" : "/logo.svg"}
       />
