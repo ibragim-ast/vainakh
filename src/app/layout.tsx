@@ -60,11 +60,11 @@ export default function RootLayout({
   return (
     <html lang="ru">
       <body
-        className={`${excentra.variable} font-sans bg-brand-light text-brand-dark`}
+        className={`${excentra.variable} min-h-screen flex flex-col font-sans bg-brand-light text-brand-dark`}
       >
         <A11yProvider>
           <Header />
-          <main>{children}</main>
+          <main className="grow">{children}</main>
           <Footer />
         </A11yProvider>
       </body>
