@@ -1,0 +1,42 @@
+export const eventsData = [
+  {
+    id: 1,
+    dayOfTheMonth: 30,
+    month: "октября",
+    description: "Сольный концерт",
+    address: "г. Грозный, ул. Шейха Али Митаева, 6",
+    dateIso: "2026-10-30",
+  },
+  {
+    id: 2,
+    dayOfTheMonth: 15,
+    month: "ноября",
+    description: "Танцевальный вечер",
+    address: "г. Грозный, ул. Ленина, 10",
+    dateIso: "2026-11-15",
+  },
+  {
+    id: 3,
+    dayOfTheMonth: 20,
+    month: "января",
+    description: "Концерт классической музыки",
+    address: "г. Грозный, ул. Гагарина, 15",
+    dateIso: "2027-01-20",
+  },
+  {
+    id: 4,
+    dayOfTheMonth: 5,
+    month: "декабря",
+    description: "Новогодний концерт",
+    address: "г. Грозный, ул. Пушкина, 20",
+    dateIso: "2026-12-05",
+  },
+  {
+    id: 5,
+    dayOfTheMonth: 5,
+    month: "августа",
+    description: "Августовский концерт",
+    address: "г. Грозный, ул. Пушкина, 20",
+    dateIso: "2026-08-05",
+  },
+];
