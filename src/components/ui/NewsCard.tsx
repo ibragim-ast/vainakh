@@ -3,16 +3,10 @@ import Image from "next/image";
 interface NewsCardProps {
   date: string;
   title: string;
-  excerpt: string;
   imageUrl: string;
 }
 
-export default function NewsCard({
-  date,
-  title,
-  excerpt,
-  imageUrl,
-}: NewsCardProps) {
+export default function NewsCard({ date, title, imageUrl }: NewsCardProps) {
   return (
     <div>
       <div className="relative aspect-4/3 overflow-hidden group">
@@ -27,7 +21,6 @@ export default function NewsCard({
       <div className="mt-6">
         <span className="text-brand-orange">{date}</span>
         <h3 className="text-2xl font-bold text-brand-light">{title}</h3>
-        <p className="text-1xl text-brand-light">{excerpt}</p>
       </div>
     </div>
   );

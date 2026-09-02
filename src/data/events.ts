@@ -3,7 +3,7 @@ export const eventsData = [
     id: 1,
     dayOfTheMonth: 30,
     month: "октября",
-    time: "19:00",
+    time: "16:00",
     description: "Сольный концерт",
     address: "г. Грозный, ул. Шейха Али Митаева, 6",
     dateIso: "2026-10-30",

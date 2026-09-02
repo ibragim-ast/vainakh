@@ -20,7 +20,6 @@ export default function News() {
               key={item.id}
               date={item.date}
               title={item.title}
-              excerpt={item.excerpt}
               imageUrl={item.imageUrl}
             />
           ))}
