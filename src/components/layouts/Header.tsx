@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useA11y } from "@/context/A11yContext";
 import { useState } from "react";
+import { useA11y } from "@/context/A11yContext";
 import { eventsData } from "@/data/events";
 import { newsData } from "@/data/news";
 import { documentsData } from "@/data/documents";
