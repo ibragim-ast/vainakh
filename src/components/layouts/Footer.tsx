@@ -71,6 +71,12 @@ export default function Footer() {
           >
             Материально-техническое обеспечение
           </Link>
+          <Link
+            className="transition-colors hover:text-brand-gold"
+            href="/vacancies"
+          >
+            Вакансии
+          </Link>
         </nav>
 
         <div className="flex flex-col gap-4 md:h-full md:justify-between">

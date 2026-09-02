@@ -11,7 +11,6 @@ export default function ContactsPage() {
   return (
     <main className="pt-32 pb-24 bg-brand-light min-h-screen">
       <div className="max-w-6xl mx-auto px-4 md:px-6 w-full">
-        {/* Заголовок */}
         <header className="mb-14">
           <span className="text-xs uppercase tracking-widest font-bold text-brand-orange block mb-3">
             Связь с нами
@@ -19,15 +18,9 @@ export default function ContactsPage() {
           <h1 className="font-sans font-bold text-3xl md:text-5xl lg:text-6xl text-brand-dark mb-6 leading-tight">
             Контакты
           </h1>
-          <p className="text-brand-dark/70 text-lg md:text-xl max-w-2xl leading-relaxed">
-            Официальные каналы связи, адрес репетиционного комплекса и схема
-            проезда.
-          </p>
         </header>
 
-        {/* Сетка контактов */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {/* Адрес и график */}
           <div className="border border-brand-dark/15 bg-white/50 p-8 rounded-sm flex flex-col justify-between">
             <div>
               <span className="text-[11px] uppercase tracking-wider font-bold text-brand-orange block mb-3">
@@ -47,7 +40,6 @@ export default function ContactsPage() {
             </div>
           </div>
 
-          {/* Телефоны и Email */}
           <div className="border border-brand-dark/15 bg-white/50 p-8 rounded-sm flex flex-col justify-between">
             <div>
               <span className="text-[11px] uppercase tracking-wider font-bold text-brand-orange block mb-3">
@@ -101,7 +93,6 @@ export default function ContactsPage() {
             </div>
           </div>
 
-          {/* Обращения граждан */}
           <div className="border border-brand-dark/15 bg-white/50 p-8 rounded-sm flex flex-col justify-between">
             <div>
               <span className="text-[11px] uppercase tracking-wider font-bold text-brand-orange block mb-3">
