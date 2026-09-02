@@ -30,6 +30,8 @@ export default function EventsPage() {
                 key={item.id}
                 dayOfTheMonth={item.dayOfTheMonth}
                 month={item.month}
+                time={item.time}
+                badge={item.badge}
                 address={item.address}
                 description={item.description}
               />

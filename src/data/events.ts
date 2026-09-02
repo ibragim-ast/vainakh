@@ -10,11 +10,13 @@ export const eventsData = [
   },
   {
     id: 2,
-    dayOfTheMonth: 15,
+    dayOfTheMonth: 22,
     month: "ноября",
-    time: "18:00",
-    description: "Танцевальный вечер",
-    address: "г. Грозный, ул. Ленина, 10",
+    time: "16:00",
+    description: "Концерт",
+    badge:
+      "Совместный концерт с Государственным академическим ансамблем танца «Алан»",
+    address: "г. Грозный, ул. Шейха Али Митаева, 6",
     dateIso: "2026-11-15",
   },
   {

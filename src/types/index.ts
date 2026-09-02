@@ -3,6 +3,7 @@ export interface IEvent {
   dayOfTheMonth: number;
   month: string;
   time: string;
+  badge?: string;
   description: string;
   address: string;
   dateIso: string;
