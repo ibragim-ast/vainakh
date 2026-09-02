@@ -43,6 +43,12 @@ export default function Footer() {
           </Link>
           <Link
             className="transition-colors hover:text-brand-gold"
+            href="/tickets"
+          >
+            Билеты и правила
+          </Link>
+          <Link
+            className="transition-colors hover:text-brand-gold"
             href="/reception"
           >
             Электронная приемная
