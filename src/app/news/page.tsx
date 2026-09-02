@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 
 export default function News() {
   return (
-    <main className="pt-32 pb-20 bg-brand-dark">
+    <main className="pt-32 pb-20 bg-brand-light text-brand-dark">
       <div className="max-w-6xl mx-auto px-6 w-full">
-        <h1 className="font-sans font-bold text-4xl md:text-5xl text-brand-light">
+        <h1 className="font-sans font-bold text-4xl md:text-5xl text-brand-dark">
           Новости
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mt-12">

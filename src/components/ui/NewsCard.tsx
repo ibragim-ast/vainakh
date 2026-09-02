@@ -22,7 +22,9 @@ export default function NewsCard({ date, title, imageUrl, id }: NewsCardProps) {
       </div>
       <div className="mt-6">
         <span className="text-brand-orange">{date}</span>
-        <h3 className="text-2xl font-bold text-brand-light">{title}</h3>
+        <h3 className="text-2xl font-bold transition-colors group-hover:text-brand-orange">
+          {title}
+        </h3>
       </div>
     </Link>
   );

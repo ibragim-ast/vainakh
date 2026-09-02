@@ -6,7 +6,7 @@ export default async function News() {
   const newsData = await getNews();
 
   return (
-    <section className="py-20 bg-brand-dark">
+    <section className="py-20 bg-brand-dark text-brand-light">
       <div className="max-w-6xl mx-auto px-4 md:px-6 w-full">
         <h2 className="text-3xl md:text-5xl font-sans font-bold text-brand-light">
           Новости
