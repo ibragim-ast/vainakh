@@ -47,6 +47,18 @@ export default function Footer() {
           >
             Электронная приемная
           </Link>
+          <Link
+            className="transition-colors hover:text-brand-gold"
+            href="/services"
+          >
+            Виды предоставляемых услуг
+          </Link>
+          <Link
+            className="transition-colors hover:text-brand-gold"
+            href="/facilities"
+          >
+            Материально-техническое обеспечение
+          </Link>
         </nav>
 
         <div className="flex flex-col gap-4 md:h-full md:justify-between">
