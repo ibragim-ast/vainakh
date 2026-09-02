@@ -53,6 +53,9 @@ export default function Footer() {
           >
             Контакты
           </Link>
+          <Link className="transition-colors hover:text-brand-gold" href="/faq">
+            Вопрос — ответ
+          </Link>
           <Link
             className="transition-colors hover:text-brand-gold"
             href="/reception"
