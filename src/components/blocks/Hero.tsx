@@ -16,11 +16,11 @@ export default function Hero() {
           Государственный академический ансамбль танца "Вайнах"
         </h1>
         <p className="md:mb-10 mb-6 text-xl md:text-2xl text-brand-light/80 max-w-2xl">
-          Легенда танца
+          «Визитная карточка чеченского народа»
+          <span className="block mt-1 text-sm md:text-base uppercase tracking-widest text-brand-gold ml-8 md:ml-16 opacity-80">
+            — Ахмат-Хаджи Кадыров
+          </span>
         </p>
-        <button className="text-sm md:text-base uppercase tracking-widest px-10 py-4 bg-brand-dark text-brand-gold rounded-sm transition-colors hover:bg-brand-orange hover:text-brand-dark">
-          Афиша
-        </button>
       </div>
     </section>
   );
