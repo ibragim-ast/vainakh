@@ -26,7 +26,6 @@ export default function TicketsPage() {
         </header>
 
         <div className="flex flex-col gap-16">
-          {/* Блок 1: Способы покупки */}
           <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="border border-brand-dark/15 bg-white/50 p-8 rounded-sm flex flex-col justify-between">
               <div>
@@ -37,7 +36,7 @@ export default function TicketsPage() {
                   Электронные билеты
                 </h2>
                 <p className="text-brand-dark/80 text-sm md:text-base leading-relaxed mb-6">
-                  Приобрести официальные билеты на все сольные выступления
+                  Приобрести электронные билеты на все сольные выступления
                   ансамбля можно онлайн через раздел «Афиша» на нашем сайте или
                   на сайтах билетных операторов-партнеров.
                 </p>
@@ -76,7 +75,6 @@ export default function TicketsPage() {
             </div>
           </section>
 
-          {/* Блок 2: Пушкинская карта */}
           <section className="border border-brand-orange/30 bg-white/80 p-8 md:p-10 rounded-sm relative overflow-hidden">
             <div className="max-w-3xl">
               <span className="text-xs uppercase tracking-widest font-bold text-brand-orange block mb-2">
@@ -107,7 +105,6 @@ export default function TicketsPage() {
             </div>
           </section>
 
-          {/* Блок 3: Льготы и условия */}
           <section>
             <h2 className="font-sans font-bold text-2xl md:text-3xl text-brand-dark mb-6">
               Льготные категории граждан
