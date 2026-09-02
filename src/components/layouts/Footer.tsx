@@ -80,6 +80,12 @@ export default function Footer() {
           >
             Вакансии
           </Link>
+          <Link
+            className="transition-colors hover:text-brand-gold"
+            href="/audience"
+          >
+            Фото для зрителей
+          </Link>
         </nav>
 
         <div className="flex flex-col gap-4 md:h-full md:justify-between">
