@@ -1,6 +1,7 @@
+import { IEvent } from "@/types";
 import { eventsData } from "@/data/events";
 
-async function getEvents() {
+async function getEvents(): Promise<IEvent[]> {
   return eventsData;
 }
 

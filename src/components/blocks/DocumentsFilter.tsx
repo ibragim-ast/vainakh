@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import DocumentCard from "@/components/ui/DocumentCard";
-import { documentsData } from "@/data/documents";
 
 export default function DocumentsFilter({
   initialDocs,
