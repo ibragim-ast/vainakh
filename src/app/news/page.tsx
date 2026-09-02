@@ -21,6 +21,7 @@ export default function News() {
               date={item.date}
               title={item.title}
               imageUrl={item.imageUrl}
+              id={item.id}
             />
           ))}
         </div>

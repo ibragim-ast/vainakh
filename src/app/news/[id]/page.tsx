@@ -44,11 +44,13 @@ export default async function NewsArticle({
             className="object-cover object-center"
           />
         </div>
-        <span className="text-brand-orange block mb-6 text-sm font-bold tracking-widest">
+        <span className="text-brand-orange block mb-6 text-sm font-bold tracking-widest uppercase">
           {article.date}
         </span>
-        <h1 className="font-sans font-bold ">{article.title}</h1>
-        <p className=" text-brand-dark text-lg leading-relaxed opacity-90">
+        <h1 className="font-sans font-bold text-3xl md:text-5xl mb-8 text-brand-dark leading-tight">
+          {article.title}
+        </h1>
+        <p className=" text-brand-dark text-lg opacity-90 whitespace-pre-wrap md:text-xl leading-relaxed">
           {article.content}
         </p>
       </div>
