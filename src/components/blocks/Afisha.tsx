@@ -6,7 +6,7 @@ export default async function Afisha() {
   const eventsData = await getEvents();
   const upcomingEvents = eventsData
     .filter((item) => new Date(item.dateIso).getTime() >= new Date().getTime())
-    .slice(0, 4)
+    .slice(0, 3)
     .sort(
       (a, b) => new Date(a.dateIso).getTime() - new Date(b.dateIso).getTime(),
     )
