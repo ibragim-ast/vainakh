@@ -1,5 +1,12 @@
+import { Metadata } from "next";
 import EventCard from "@/components/ui/EventCard";
 import { eventsData } from "@/data/events";
+
+export const metadata: Metadata = {
+  title: "Афиша | Ансамбль Вайнах",
+  description:
+    "Официальный гастрольный график и расписание концертов государственного ансамбля Вайнах.",
+};
 
 export default function EventsPage() {
   return (

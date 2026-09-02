@@ -1,5 +1,11 @@
+import { Metadata } from "next";
 import NewsCard from "@/components/ui/NewsCard";
 import { newsData } from "@/data/news";
+
+export const metadata: Metadata = {
+  title: "Новости | Ансамбль Вайнах",
+  description: "Последние новости и события ансамбля Вайнах.",
+};
 
 export default function News() {
   return (
