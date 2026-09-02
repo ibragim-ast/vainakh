@@ -30,6 +30,12 @@ export default function Footer() {
           >
             О нас
           </Link>
+          <Link
+            className="transition-colors hover:text-brand-gold"
+            href="/documents"
+          >
+            Документы
+          </Link>
         </nav>
 
         <div className="flex flex-col gap-3">

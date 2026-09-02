@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useA11y } from "@/context/A11yContext";
 import { eventsData } from "@/data/events";
 import { newsData } from "@/data/news";
@@ -26,17 +26,25 @@ export default function Header() {
     ? documentsData.filter((d) => d.title.toLowerCase().includes(query))
     : [];
 
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsSearchOpen(false);
+    };
+    window.addEventListener("keydown", handleEsc);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, []);
+
   return (
     <>
-      <header className="text-brand-gold px-6 py-4 sticky top-0 z-50 bg-brand-dark/80 backdrop-blur-md border-b border-white/5">
-        <div className="flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto w-full gap-4 md:gap-0">
+      <header className="text-brand-gold px-6 py-2 md:py-4 sticky top-0 z-50 bg-brand-dark/80 backdrop-blur-md border-b border-white/5">
+        <div className="flex md:flex-row justify-between items-center max-w-6xl mx-auto w-full gap-2 md:gap-0">
           <Link className="shrink-0" href="/">
             <Image
               aria-label="На главную страницу"
               alt="Логотип ансамбля Вайнах"
               width={300}
               height={90}
-              className="h-30 w-auto"
+              className="h-14 md:h-22.5 w-auto"
               priority
               src={isA11yMode ? "/logo-a11y.svg" : "/logo.svg"}
             />
@@ -64,14 +72,37 @@ export default function Header() {
                   О нас
                 </Link>
               </li>
+              <li className="block md:hidden">
+                <Link
+                  href="/documents"
+                  className="text-xs uppercase tracking-widest font-bold transition-all duration-300 hover:text-brand-light hover:opacity-80"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Документы
+                </Link>
+              </li>
             </ul>
           </nav>
           <div className="flex items-center gap-3 md:gap-6">
             <button
               className="block md:hidden"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Меню"
             >
-              {isMobileMenuOpen ? "Закрыть" : "Меню"}
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6 text-brand-gold transition-colors hover:text-brand-light"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
             </button>
             <button
               aria-label="Поиск"
@@ -94,7 +125,7 @@ export default function Header() {
               </svg>
             </button>
             <button
-              className="text-[9px] md:text-xs px-2 py-1 md:px-4 md:py-2 text-center leading-tight uppercase tracking-widest border border-brand-gold/30 rounded-sm transition-colors hover:border-brand-gold hover:bg-brand-gold/10"
+              className="hidden md:block text-[9px] md:text-xs px-2 py-1 md:px-4 md:py-2 text-center leading-tight uppercase tracking-widest border border-brand-gold/30 rounded-sm transition-colors hover:border-brand-gold hover:bg-brand-gold/10"
               onClick={toggleA11yMode}
               aria-label="Версия для слабовидящих"
             >
@@ -103,14 +134,30 @@ export default function Header() {
           </div>
         </div>
       </header>
+
+      {/* Модальное окно поиска по сайту */}
       {isSearchOpen && (
         <div className="fixed inset-0 z-100 bg-brand-dark/80 backdrop-blur-md flex flex-col">
           <div className="flex justify-end p-6 md:px-12 md:py-8">
             <button
               onClick={() => setIsSearchOpen(false)}
-              className="text-brand-light cursor-pointer text-xs uppercase tracking-widest px-4 py-2 border border-brand-light/20 transition-colors hover:border-brand-orange hover:text-brand-orange"
+              aria-label="Закрыть поиск"
+              className="text-brand-light cursor-pointer transition-colors hover:border-brand-orange hover:text-brand-orange"
             >
-              Закрыть
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-8 h-8 transition-transform hover:scale-110 hover:text-brand-orange"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18 18 6M6 6l12 12"
+                />
+              </svg>
             </button>
           </div>
           <div className="flex-1 flex flex-col justify-center items-center px-6">

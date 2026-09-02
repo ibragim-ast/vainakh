@@ -2,7 +2,7 @@ import localFont from "next/font/local";
 import { Metadata } from "next";
 import { A11yProvider } from "@/context/A11yContext";
 import Header from "@/components/layouts/Header";
-import Footer from "@/components/blocks/Footer";
+import Footer from "@/components/layouts/Footer";
 import "./globals.css";
 
 const excentra = localFont({
@@ -18,29 +18,14 @@ const excentra = localFont({
       style: "normal",
     },
     {
-      path: "../fonts/ExcentraPro-MediumItalic.woff2",
-      weight: "500",
-      style: "italic",
-    },
-    {
       path: "../fonts/ExcentraPro-SemiBold.woff2",
       weight: "600",
       style: "normal",
     },
     {
-      path: "../fonts/ExcentraPro-SemiBoldItalic.woff2",
-      weight: "600",
-      style: "italic",
-    },
-    {
       path: "../fonts/ExcentraPro-Bold.woff2",
       weight: "700",
       style: "normal",
-    },
-    {
-      path: "../fonts/ExcentraPro-BoldItalic.woff2",
-      weight: "700",
-      style: "italic",
     },
   ],
   variable: "--font-excentra",
