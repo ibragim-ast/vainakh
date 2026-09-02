@@ -3,6 +3,7 @@ interface EventCardProps {
   month: string;
   description: string;
   address: string;
+  badge?: string;
 }
 
 export default function EventCard({

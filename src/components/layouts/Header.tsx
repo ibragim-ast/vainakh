@@ -46,7 +46,7 @@ export default function Header() {
               height={90}
               className="h-14 md:h-22.5 w-auto"
               priority
-              src={isA11yMode ? "/logo-a11y.svg" : "/logo.svg"}
+              src={isA11yMode ? "/logo-a11y.svg" : "/logo.png"}
             />
           </Link>
 
