@@ -13,7 +13,7 @@ function PersonCard({ person }: { person: StaffMember }) {
   return (
     <div className="border border-brand-dark/15 bg-white/60 rounded-sm overflow-hidden flex flex-col h-full">
       {/* Контейнер для фото 3/4 */}
-      <div className="relative aspect-[3/4] w-full bg-brand-dark/5 flex items-center justify-center overflow-hidden shrink-0">
+      <div className="relative aspect-3/4 w-full bg-brand-dark/5 flex items-center justify-center overflow-hidden shrink-0">
         {person.image ? (
           <Image
             src={person.image}
