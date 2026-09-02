@@ -1,8 +1,10 @@
 import Link from "next/link";
 import NewsCard from "../ui/NewsCard";
-import { newsData } from "@/data/news";
+import { getNews } from "@/api/news";
 
-export default function News() {
+export default async function News() {
+  const newsData = await getNews();
+
   return (
     <section className="py-20 bg-brand-dark">
       <div className="max-w-6xl mx-auto px-4 md:px-6 w-full">

@@ -1,8 +1,10 @@
 import Link from "next/link";
 import EventCard from "../ui/EventCard";
-import { eventsData } from "@/data/events";
+import { getEvents } from "@/api/events";
 
-export default function Afisha() {
+export default async function Afisha() {
+  const eventsData = await getEvents();
+
   return (
     <section className="py-20 bg-brand-light">
       <div className="max-w-6xl mx-auto px-4 md:px-6 w-full">
