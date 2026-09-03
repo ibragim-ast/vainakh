@@ -5,7 +5,6 @@ import Link from "next/link";
 import { faqData } from "@/data/faq";
 
 export default function FaqPage() {
-  // Храним ID открытого пункта, чтобы работал классический аккордеон
   const [openId, setOpenId] = useState<number | null>(1);
 
   const toggleItem = (id: number) => {
@@ -17,7 +16,6 @@ export default function FaqPage() {
   return (
     <main className="pt-32 pb-24 bg-brand-light min-h-screen">
       <div className="max-w-4xl mx-auto px-4 md:px-6 w-full">
-        {/* Заголовок */}
         <header className="mb-14">
           <span className="text-xs uppercase tracking-widest font-bold text-brand-orange block mb-3">
             Справочная служба
