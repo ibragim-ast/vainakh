@@ -31,7 +31,7 @@ export default function DocumentsFilter({
                 <button
                   className={`whitespace-nowrap rounded-sm md:rounded-r-md text-left px-4 py-2.5 md:py-3 text-xs md:text-sm border-b-2 md:border-b-0 md:border-l-2 transition-colors shrink-0 ${
                     activeCategory === cat
-                      ? "border-brand-orange text-brand-orange font-bold bg-brand-dark/[0.03] md:bg-transparent"
+                      ? "border-brand-orange text-brand-orange font-bold bg-brand-dark/3 md:bg-transparent"
                       : "border-brand-dark/10 text-brand-dark hover:border-brand-dark/30 hover:bg-brand-dark/5 cursor-pointer"
                   }`}
                   onClick={() => setActiveCategory(cat)}
