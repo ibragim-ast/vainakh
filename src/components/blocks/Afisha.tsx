@@ -29,7 +29,7 @@ export default async function Afisha() {
           Афиша
         </h2>
         {upcomingEvents.length === 0 ? (
-          <div className="flex flex-col items-center justify-center py-16 text-center gap-6 border-t border-brand-dark/10 mt-8">
+          <div className="flex flex-col items-center justify-center py-16 text-center gap-4 border-t border-brand-dark/10 mt-8">
             <p className="text-xl md:text-2xl text-brand-dark/60 font-medium">
               На данный момент гастрольный график формируется.
             </p>

@@ -15,7 +15,7 @@ export default function EventsPage() {
         <h1 className="font-sans font-bold text-4xl md:text-5xl text-brand-dark">
           Расписание концертов
         </h1>
-        <div className="mt-12 flex flex-col gap-8">
+        <div className="mt-6 md:mt-10 flex flex-col gap-3 md:gap-4">
           {eventsData
             .filter(
               (item) =>
