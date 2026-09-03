@@ -65,6 +65,15 @@ export default function Header() {
               </li>
               <li>
                 <Link
+                  href="/news"
+                  className="text-xs uppercase tracking-widest font-bold transition-all duration-300 hover:text-brand-light hover:opacity-80"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Новости
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/about"
                   className=" text-xs uppercase tracking-widest font-bold transition-all duration-300 hover:text-brand-light hover:opacity-80"
                   onClick={() => setIsMobileMenuOpen(false)}
@@ -72,14 +81,17 @@ export default function Header() {
                   О нас
                 </Link>
               </li>
-              <li className="block md:hidden">
-                <Link
-                  href="/documents"
-                  className="text-xs uppercase tracking-widest font-bold transition-all duration-300 hover:text-brand-light hover:opacity-80"
-                  onClick={() => setIsMobileMenuOpen(false)}
+              <li>
+                <button
+                  className="md:hidden text-left w-full pt-4 border-t border-white/10 text-xs uppercase tracking-widest font-bold text-brand-gold transition-colors hover:text-brand-light"
+                  aria-label="Версия для слабовидящих"
+                  onClick={() => {
+                    toggleA11yMode();
+                    setIsMobileMenuOpen;
+                  }}
                 >
-                  Документы
-                </Link>
+                  {isA11yMode ? "Обычная версия" : "Версия для слабовидящих"}
+                </button>
               </li>
             </ul>
           </nav>
