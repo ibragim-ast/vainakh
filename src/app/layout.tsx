@@ -1,9 +1,10 @@
 import localFont from "next/font/local";
 import { Metadata } from "next";
 import { A11yProvider } from "@/context/A11yContext";
+import Script from "next/script";
+import PosWidget from "@/components/widgets/PosWidget";
 import Header from "@/components/layouts/Header";
 import Footer from "@/components/layouts/Footer";
-import Script from "next/script";
 import "./globals.css";
 
 const excentra = localFont({
@@ -68,6 +69,7 @@ export default function RootLayout({
           <Header />
           <main className="grow">{children}</main>
           <Footer />
+          <PosWidget />
         </A11yProvider>
       </body>
     </html>
