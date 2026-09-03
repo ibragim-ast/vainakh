@@ -16,7 +16,7 @@ export default function EventCard({
   time,
 }: EventCardProps) {
   return (
-    <div className="flex flex-col md:flex-row gap-5 md:gap-10 items-stretch md:items-center justify-between border-b border-brand-dark/15 p-4 md:p-6 rounded-sm transition-all duration-300 hover:bg-brand-dark/03 hover:-translate-y-0.5 group">
+    <div className="flex flex-col md:flex-row gap-5 md:gap-10 items-stretch md:items-center justify-between border-b border-brand-dark/15 p-4 md:p-6 rounded-sm transition-all duration-300 hover:bg-brand-dark/3 hover:-translate-y-0.5 group">
       <div className="flex gap-4 md:gap-12 items-start md:items-center">
         <div className="flex flex-col shrink-0 w-20 md:w-28 text-center md:text-left justify-center">
           <span className="text-4xl md:text-6xl font-sans font-bold text-brand-orange leading-tight">
