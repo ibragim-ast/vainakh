@@ -27,7 +27,7 @@ export default function ContactsPage() {
                 Адрес
               </span>
               <h2 className="font-sans font-bold text-xl text-brand-dark mb-4">
-                Комплекс ансамбля
+                Здание ансамбля
               </h2>
               <p className="text-brand-dark/80 text-sm md:text-base leading-relaxed mb-6">
                 364024, Чеченская Республика, г. Грозный, ул. Шейха Али Митаева,
