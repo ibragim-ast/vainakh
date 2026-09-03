@@ -6,9 +6,7 @@ export default function InfoPage() {
           Сведения об организации
         </h1>
 
-        {/* Главная сетка */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-12">
-          {/* Блок 1: Базовая информация */}
           <div>
             <h2 className="text-2xl font-bold text-brand-orange mb-6">
               Базовая информация
