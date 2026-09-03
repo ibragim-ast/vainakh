@@ -47,8 +47,8 @@ export default function EventCard({
         </div>
       </div>
 
-      <div className="w-full md:w-auto mt-2 md:mt-0">
-        <button className="w-full md:w-auto bg-brand-dark text-brand-gold uppercase tracking-widest text-xs md:text-sm font-bold rounded-sm transition-colors hover:bg-brand-orange hover:text-brand-dark px-6 py-3.5 md:px-8 md:py-4 shrink-0 shadow-sm active:scale-[0.99]">
+      <div className="w-full md:w-auto shrink-0 mt-2 md:mt-0">
+        <button className="w-full md:w-auto shrink-0 whitespace-nowrap bg-brand-dark text-brand-gold uppercase tracking-widest text-xs md:text-sm font-bold rounded-sm transition-colors hover:bg-brand-orange hover:text-brand-dark px-5 py-3.5 md:px-7 md:py-4 shadow-sm active:scale-[0.99] cursor-pointer">
           Купить билет
         </button>
       </div>

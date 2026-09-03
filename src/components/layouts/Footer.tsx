@@ -76,9 +76,6 @@ export default function Footer() {
           >
             Виды услуг
           </Link>
-          <Link className="transition-colors hover:text-brand-gold" href="/nok">
-            Оценка качества (НОК)
-          </Link>
           <Link
             className="transition-colors hover:text-brand-gold"
             href="/festival"
