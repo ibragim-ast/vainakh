@@ -60,7 +60,7 @@ export default function TicketsPage() {
                 <p className="text-brand-dark/80 text-sm md:text-base leading-relaxed mb-4">
                   Билеты также доступны в кассах концертных залов
                   непосредственно в дни проведения мероприятий и по
-                  предварительному бронированию через администратора.
+                  предварительному бронированию по телефону.
                 </p>
                 <div className="text-xs text-brand-dark/70 flex flex-col gap-1 border-t border-brand-dark/10 pt-4">
                   <div>
