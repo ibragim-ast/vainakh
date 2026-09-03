@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-brand-dark text-brand-light border-t border-white/10">
-      <div className="max-w-6xl mx-auto px-6 py-16 w-full grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 items-start">
+      <div className="max-w-6xl mx-auto px-6 py-16 w-full grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-6 lg:gap-12 items-start">
         <div className="flex flex-col gap-4 md:h-full md:justify-between">
           <h4 className="font-sans font-bold text-lg md:text-xl">
             Государственный академический ансамбль танца «Вайнах»
@@ -12,11 +12,13 @@ export default function Footer() {
             Copyright © 2026 Все права защищены.
           </p>
         </div>
-
         <nav
-          aria-label="Дополнительная навигация"
-          className="flex flex-col gap-2 md:gap-4"
+          aria-label="Разделы сайта"
+          className="flex flex-col gap-2 md:gap-3"
         >
+          <h4 className="text-xs uppercase tracking-widest font-bold text-brand-gold/60 mb-2">
+            Пользователям
+          </h4>
           <Link
             className="transition-colors hover:text-brand-gold"
             href="/events"
@@ -25,10 +27,31 @@ export default function Footer() {
           </Link>
           <Link
             className="transition-colors hover:text-brand-gold"
+            href="/news"
+          >
+            Новости
+          </Link>
+          <Link
+            className="transition-colors hover:text-brand-gold"
             href="/about"
           >
             О нас
           </Link>
+          <Link
+            className="transition-colors hover:text-brand-gold"
+            href="/spectators"
+          >
+            Зрителям
+          </Link>
+        </nav>
+
+        <nav
+          aria-label="Официальные сведения"
+          className="flex flex-col gap-2 md:gap-3"
+        >
+          <h4 className="text-xs uppercase tracking-widest font-bold text-brand-gold/60 mb-2">
+            Официальная информация
+          </h4>
           <Link
             className="transition-colors hover:text-brand-gold"
             href="/documents"
@@ -43,48 +66,18 @@ export default function Footer() {
           </Link>
           <Link
             className="transition-colors hover:text-brand-gold"
-            href="/tickets"
-          >
-            Билеты и правила
-          </Link>
-          <Link
-            className="transition-colors hover:text-brand-gold"
-            href="/contacts"
-          >
-            Контакты
-          </Link>
-          <Link className="transition-colors hover:text-brand-gold" href="/faq">
-            Вопрос — ответ
-          </Link>
-          <Link
-            className="transition-colors hover:text-brand-gold"
-            href="/reception"
-          >
-            Электронная приемная
-          </Link>
-          <Link
-            className="transition-colors hover:text-brand-gold"
             href="/services"
           >
-            Виды предоставляемых услуг
+            Виды услуг
+          </Link>
+          <Link className="transition-colors hover:text-brand-gold" href="/nok">
+            Оценка качества (НОК)
           </Link>
           <Link
             className="transition-colors hover:text-brand-gold"
-            href="/facilities"
+            href="/festival"
           >
-            Материально-техническое обеспечение
-          </Link>
-          <Link
-            className="transition-colors hover:text-brand-gold"
-            href="/vacancies"
-          >
-            Вакансии
-          </Link>
-          <Link
-            className="transition-colors hover:text-brand-gold"
-            href="/audience"
-          >
-            Фото для зрителей
+            Фестиваль им. М. Эсамбаева
           </Link>
         </nav>
 
